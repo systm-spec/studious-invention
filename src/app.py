@@ -15,8 +15,6 @@ root = ctk.CTk()  # Erstelle das Hauptfenster
 root.title("Mein RPG")  # Setze den Fenstertitel
 root.geometry("800x600")  # Setze die Fenstergröße
 
-
-
 # Attributswerte
 attribute = ["Kraft", "Intelligenz", "Charisma", "Wortgewandtheit", "Glaube", "Willenskraft"]
 attribute_labels = {}
