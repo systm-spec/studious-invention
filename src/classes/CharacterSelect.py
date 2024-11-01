@@ -1,4 +1,8 @@
 import customtkinter as ctk
+
+from src.classes.CharacterPreview import CharacterPreview
+
+
 class CharacterSelect(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
@@ -27,9 +31,11 @@ class CharacterSelect(ctk.CTkFrame):
         self.character_config_frame.grid(row= 0, column= 0, ipadx= 4, ipady= 4)
         self.character_config_frame.grid_rowconfigure((0, 1, 2, 3, 4), weight= 1)
         # Character_Preview_Frame
-        self.character_preview_frame= ctk.CTkFrame(self.body_frame, fg_color= "green")
+        self.character_preview_frame= CharacterPreview(master, fg_color= "green")
         self.character_preview_frame.grid(row= 0, column= 1, padx= (10, 0))
-        
+
+
+
 
 
 
