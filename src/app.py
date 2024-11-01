@@ -106,13 +106,13 @@ def start_game():
     root.geometry('800x600')
 
     # Hintergrundbild laden
-    hintergrundbild_path = os.path.join(os.getcwd(), "images/Hintergrundlayout.jpg")
+    hintergrundbild_path = os.path.join(os.getcwd(), "assets/img/Hintergrundlayout.jpg")
     hintergrundbild = Image.open(hintergrundbild_path)
     hintergrundbild = CTkImage(hintergrundbild, size=(800, 600))  # Passe die Größe an
     hintergrund_label = ctk.CTkLabel(root, image=hintergrundbild, text="")
     hintergrund_label.place(x=0, y=0, relwidth=1, relheight=1)
 
-    text_frame = ctk.CTkFrame(root, image=hintergrund_option_frame)
+    text_frame = ctk.CTkFrame(root)
     text_frame.place(relx=0.5, rely=0.5, anchor='center')
     ctk.CTkLabel(text_frame, text="Das Abenteuer beginnt!").grid()
 
@@ -147,7 +147,7 @@ def start_game():
     weiter_button.configure(state='disabled')
 
 # Hintergrundbild laden und Labeln
-hintergrundbild_path = os.path.join(os.getcwd(), "images/Hintergrundbild_Start.jpg")
+hintergrundbild_path = os.path.join(os.getcwd(), "assets/img/Hintergrundbild_Start.jpg")
 hintergrundbild = Image.open(hintergrundbild_path)
 hintergrundbild = CTkImage(hintergrundbild, size=(800, 600))  # Passe die Größe an
 hintergrund_label = ctk.CTkLabel(root, image=hintergrundbild, text="")
@@ -161,7 +161,7 @@ spieltitel_label.place(relx=0.5, rely=0.1, anchor='center')  # Zentriert im ober
 options_frame = ctk.CTkFrame(root)
 options_frame.place(relx=0.5, rely=0.4, anchor='center')  # Positioniere das Frame
 #'hintergrund für optionsframe laden '
-hintergrundbild_path = os.path.join(os.getcwd(), "images/optionshintergrund.jpg")
+hintergrundbild_path = os.path.join(os.getcwd(), "assets/img/optionshintergrund.jpg")
 hintergrundbild = Image.open(hintergrundbild_path)
 hintergrundbild = CTkImage(hintergrundbild, size=(400, 400))  # Passe die Größe an
 
