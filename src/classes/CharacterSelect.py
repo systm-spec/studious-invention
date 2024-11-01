@@ -1,5 +1,5 @@
 import customtkinter as ctk
-
+from PIL import Image
 from src.classes.CharacterPreview import CharacterPreview
 
 

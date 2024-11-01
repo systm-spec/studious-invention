@@ -11,8 +11,8 @@ class CharacterPreview(ctk.CTkFrame):
         self.preview_image_frame= ctk.CTkFrame(self, fg_color= "yellow")
         self.preview_image_frame.grid(column= 0)
         # Image Load
-        self.preview_image= ctk.CTkImage(dark_image= Image.open("../assets/img/cls/Bard.png", "r"), size= (400, 640))
-        self.img_wrapper= ctk.CTkLabel(master= self.preview_image_frame, image= self.preview_image)
+        self.preview_image= ctk.CTkImage()
+        self.img_wrapper= ctk.CTkLabel(master= self.preview_image_frame, image=self.preview_image)
         self.img_wrapper.grid()
 
         # Preview_Description_Frame
