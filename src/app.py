@@ -10,15 +10,15 @@ class App(ctk.CTk):
         super().__init__()
         self.title("Der RPG")
         self.geometry("680x720")
-        # self.grid_rowconfigure(0, weight=1)
-        # self.grid_columnconfigure(0, weight=1)
-
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("./config/theme/custom.json")
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=1)
 
+        ### START WINDOW ###
         self.start_menu_frame = StartMenu(master=self, fg_color="transparent")
-        self.start_menu_frame.pack(fill="both", expand=True, padx=120, pady=240)
-        # self.start_menu_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
+        self.start_menu_frame.grid(row=0, column=0, padx=20, pady=210, sticky="nsew")
+        
 # MAIN
 check_for_windows()
 app = App()
