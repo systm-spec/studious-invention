@@ -11,7 +11,7 @@ class App(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("Der RPG")
-        self.geometry("680x720")
+        self.geometry("1280x720")
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("./config/theme/custom.json")
         self.grid_rowconfigure(0, weight=1)
