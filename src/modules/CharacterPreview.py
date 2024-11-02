@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from PIL import Image
+
 class CharacterPreview(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
@@ -10,8 +11,9 @@ class CharacterPreview(ctk.CTkFrame):
         # Preview_Image_Frame
         self.preview_image_frame= ctk.CTkFrame(self, fg_color= "yellow")
         self.preview_image_frame.grid(column= 0)
+
         # Image Load
-        self.preview_image= ctk.CTkImage()
+        self.preview_image= ctk.CTkImage(dark_image=Image.open("assets/img/bard.png"), size=(100,240))
         self.img_wrapper= ctk.CTkLabel(master= self.preview_image_frame, image=self.preview_image)
         self.img_wrapper.grid()
 

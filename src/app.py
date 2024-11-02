@@ -1,11 +1,15 @@
 import customtkinter as ctk
-
-from src.classes.CharacterSelect import CharacterSelect
-from src.classes.StartMenu import StartMenu
-from src.util.windows import check_for_windows
+from modules.CharacterSelect import CharacterSelect
+from modules.StartMenu import StartMenu
+from util.windows import check_for_windows
 from PIL import Image
 import os
+import sys
 
+# src als Root-Verzeichnis hinzufügen, falls nicht bereits vorhanden
+src_path = os.path.join(os.path.dirname(__file__), 'src')
+if src_path not in sys.path:
+    sys.path.append(src_path)
 
 class App(ctk.CTk):
     def __init__(self):
@@ -13,7 +17,7 @@ class App(ctk.CTk):
         self.title("Der RPG")
         self.geometry("1280x720")
         ctk.set_appearance_mode("dark")
-        ctk.set_default_color_theme("./config/theme/custom.json")
+        ctk.set_default_color_theme("config/theme/custom.json")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
