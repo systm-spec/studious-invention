@@ -8,28 +8,28 @@ class BaseCharacter:
         self.specialization = spec    # Klasse
 
         # physical
-        self._strength = strength   # Physischer Schaden
-        self._stamina = stam   # Physische Währung
-        self._constitution = const   # Stärke-Regenrationsrate
-        self._agility = ag   # Physisch-Krit DMG
-        self._versatility = vers   # Physisch-Krit Rate
+        self._strength = strength       # Physischer Schaden
+        self._stamina = stam            # Physische Währung
+        self._constitution = const      # Stärke-Regenrationsrate
+        self._agility = ag              # Physisch-Krit DMG
+        self._versatility = vers        # Physisch-Krit Rate
 
         # magical
-        self._savvy = sav  # Magischer Schaden
-        self._mana = mana   # Magische Währung
-        self._volition = vol  # Mana-Regenrationsrate
-        self._wisdom = wis  # Magie-Krit DMG
-        self._faith = faith  # Magie-Krit Rate
+        self._savvy = sav              # Magischer Schaden
+        self._mana = mana              # Magische Währung
+        self._volition = vol           # Mana-Regenrationsrate
+        self._wisdom = wis             # Magie-Krit DMG
+        self._faith = faith            # Magie-Krit Rate
 
         # hit points
-        self._hitpoints = hp  #  Base HP
-        self._vigour = vig  #  HP-Regen-Rate
-        self._hardening = hard  # additional HP
-        self._armor = armor  # Armor Items
+        self._hitpoints = hp           #  Base HP
+        self._vigour = vig             #  HP-Regen-Rate
+        self._hardening = hard         # additional HP
+        self._armor = armor            # Armor Items
 
         # Misc
-        self._evade =ev  # Ausweischance
-        self._block = bl  # Blockchance
+        self._evade =ev                # Ausweischance
+        self._block = bl               # Blockchance
 
     ## Destruktormethode
     def __del__(self):
