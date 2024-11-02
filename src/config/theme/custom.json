@@ -59,6 +59,7 @@
     "corner_radius": 1000,
     "border_width_checked": 6,
     "border_width_unchecked": 3,
+    "bg_color": "transparent",
     "fg_color": ["#3B8ED0", "#1F6AA5"],
     "border_color": ["#3E454A", "#949A9F"],
     "hover_color": ["#36719F", "#144870"],

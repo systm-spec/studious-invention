@@ -20,7 +20,7 @@ class App(ctk.CTk):
         ctk.set_default_color_theme("config/theme/custom.json")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
-
+        self.bind("<Escape>", lambda a:self.destroy())
         ### START WINDOW ###
         # self.start_menu_frame = StartMenu(master=self, fg_color="transparent")
         # self.start_menu_frame.grid(row=0, column=0, padx=20, pady=210, sticky="nsew")
