@@ -1,10 +1,9 @@
 import customtkinter as ctk
-from PIL import Image
 
-from src.modules.CharacterConfig import CharacterConfig
-from src.modules.CharacterPreview import CharacterPreview
+from src.modules.start.CharacterConfig import CharacterConfig
+from src.modules.start.CharacterPreview import CharacterPreview
 
-class CharacterSelect(ctk.CTkFrame):
+class CharacterCreation(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 

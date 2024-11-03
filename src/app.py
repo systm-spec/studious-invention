@@ -1,8 +1,8 @@
 import customtkinter as ctk
-from modules.CharacterSelect import CharacterSelect
-from modules.StartMenu import StartMenu
+
+from modules.shared.CharacterOverlay import CharacterOverlay
+from modules.start.CharacterCreationPage import CharacterCreation
 from util.windows import check_for_windows
-from PIL import Image
 import os
 import sys
 
@@ -26,8 +26,12 @@ class App(ctk.CTk):
         # self.start_menu_frame.grid(row=0, column=0, padx=20, pady=210, sticky="nsew")
 
         ### CREATION WINDOW ###
-        self.start_character_frame = CharacterSelect(self, fg_color="transparent")
-        self.start_character_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
+        # self.character_creation_frame = CharacterCreation(self, fg_color="transparent")
+        # self.character_creation_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
+
+        ## TEST CHARACTER SHEET ###
+        self.character_overlay_frame = CharacterOverlay(self)
+        self.character_overlay_frame.grid(row=0, column=0, ipadx=20, ipady=20, pady=20)
         
 # MAIN
 check_for_windows()
