@@ -1,5 +1,8 @@
+from doctest import master
+
 import customtkinter as ctk
 from PIL import Image
+from pygame.examples.cursors import image
 
 from src.modules.CharacterConfig import CharacterConfig
 from src.modules.CharacterPreview import CharacterPreview
@@ -13,10 +16,12 @@ class CharacterSelect(ctk.CTkFrame):
         self.grid_columnconfigure(index= 0, weight= 1)
 
         # Heading_Frame
-        self.heading_frame= ctk.CTkFrame(self, fg_color= "#808080")
+        self.heading_frame= ctk.CTkFrame(self, fg_color= "transparent")
         self.heading_frame.grid(row= 0, column= 0)
-        self.heading_lbl= ctk.CTkLabel(self.heading_frame, text= "Start Your Adventure", fg_color= "gray14", text_color= "#FAFAFA", font= ("inter", 46))
-        self.heading_lbl.grid(padx= 2, pady= 2, ipadx= 100, ipady= 10)
+        # Image_Load
+        self.heading_image = ctk.CTkImage(dark_image=Image.open("assets/img/Header.png"), size=(765, 100))
+        self.heading_lbl= ctk.CTkLabel(master= self.heading_frame, image=self.heading_image, text="")
+        self.heading_lbl.grid()
 
         # Character_Config_Frame
         self.body_frame= ctk.CTkFrame(self, fg_color= "transparent")
