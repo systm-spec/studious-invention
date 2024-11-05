@@ -19,7 +19,7 @@ class CharacterSelect(ctk.CTkFrame):
         self.heading_frame= ctk.CTkFrame(self, fg_color= "transparent")
         self.heading_frame.grid(row= 0, column= 0)
         # Image_Load
-        self.heading_image = ctk.CTkImage(dark_image=Image.open("assets/img/Header.png"), size=(750, 100))
+        self.heading_image = ctk.CTkImage(dark_image=Image.open("assets/img/Header.png"), size=(765, 100))
         self.heading_lbl= ctk.CTkLabel(master= self.heading_frame, image=self.heading_image, text="")
         self.heading_lbl.grid()
 
