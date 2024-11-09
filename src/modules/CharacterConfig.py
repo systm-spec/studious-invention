@@ -38,7 +38,7 @@ class CharacterConfig(ctk.CTkFrame):
         self.specs.grid(row=2, padx=10)
         self.archer_btn = ctk.CTkButton(self.specs, corner_radius=2, fg_color="transparent", text="Archer", border_color="#ccc", border_width=1)
         self.archer_btn.grid(column=0, row=0, padx=3, pady=3, ipady=1)
-        self.bard_btn = ctk.CTkButton(self.specs, corner_radius=2, fg_color="transparent", text="Bard", border_color="#ccc", border_width=1)
+        self.bard_btn = ctk.CTkButton(self.specs, corner_radius=2, fg_color="transparent", text="Bard", border_color="#ccc", border_width=1, command='InfoTextbox')
         self.bard_btn.grid(column=1, row=0, padx=3, pady=3, ipady=1)
         self.druid_btn = ctk.CTkButton(self.specs, corner_radius=2, fg_color="transparent", text="Druid", border_color="#ccc", border_width=1)
         self.druid_btn.grid(column=2, row=0, padx=3, pady=3, ipady=1)
