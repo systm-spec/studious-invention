@@ -49,6 +49,7 @@ class CharacterConfig(ctk.CTkFrame):
         self.chemist_btn=ctk.CTkButton(self.specs, corner_radius=2, fg_color="transparent", text="Chemist", border_color="#ccc", border_width=1)
         self.chemist_btn.grid(column=2,row=1, padx=3, pady=3, ipady=1)
 
+
         # NAME
         self.name = ctk.CTkFrame(self, fg_color="#808080")
         self.name.grid(row=3, sticky="we", padx=80)
